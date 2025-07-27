@@ -7,7 +7,38 @@
 </head>
 <body>
 
-    <hi>This the manage services menu</hi>
+  <a href="/selection_menu" class="back-button">Back to Menu</a>
+
+  <a href="#" class="add-button" onclick="openAddServiceWindow()">Add Service</a>
+
+  <h1>Services</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Client</th>
+          <th>Worker</th>
+          <th>Description</th>
+          <th>Duration (min)</th>
+          <th>Cost (euro)</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for service in services %}
+        <tr>
+          <td>{{ service.date }}</td>
+          <td>{{ service.client }}</td>
+          <td>{{ service.worker }}</td>
+          <td>{{ service.description }}</td>
+          <td>{{ service.duration }}</td>
+          <td>{{ service.cost }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
 
     <script src="{{ url_for('static', filename='js/manage_services.js') }}"></script> 

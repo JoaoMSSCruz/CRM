@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Add Service</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/add_service.css') }}">
+</head>
+<body>
+  <h2>Add New Service</h2>
+  <form id="serviceForm">
+    <input type="date" name="date" required>
+    <select name="client" required>
+        <option value="" disabled selected>Select Client</option>
+        {% for c in clients %}
+          <option value="{{ c[0] }}">{{ c[1] }}</option>
+        {% endfor %}
+      </select>
+    
+    {% if is_admin %}
+      <select name="worker" required>
+        <option value="" disabled selected>Select Worker</option>
+        {% for worker in workers %}
+          <option value="{{ worker[0] }}">{{ worker[1] }}</option>
+        {% endfor %}
+      </select>
+
+    {% else %}
+        <input type="text" name="worker" value="{{ current_user }}" readonly>
+    {% endif %}
+    
+    <input type="text" name="description" placeholder="Description" required>
+    <input type="text" name="duration" placeholder="Duration" required>
+    <input type="text" name="cost" placeholder="Cost" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script src="{{ url_for('static', filename='js/add_service.js') }}"></script>
+</body>
+</html>

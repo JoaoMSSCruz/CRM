@@ -7,7 +7,45 @@
 </head>
 <body>
 
-    <hi>This the manage clients menu</hi>
+  <a href="/selection_menu" class="back-button">Back to Menu</a>
+
+  <a href="#" class="add-button" onclick="openAddClientWindow()">Add Client</a>
+
+
+  <h1>Clients</h1>
+
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Date</th>
+          <th>Email</th>
+          <th>Number</th>
+          <th>NIF</th>
+          <th>Address</th>
+          <th>Observation</th>
+          <th>Active</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for client in clients %}
+        <tr>
+          <td>{{ client.name }}</td>
+          <td>{{ client.company }}</td>
+          <td>{{ client.date }}</td>
+          <td>{{ client.email or "" }}</td>
+          <td>{{ client.number or "" }}</td>
+          <td>{{ client.nif }}</td>
+          <td>{{ client.address }}</td>
+          <td>{{ client.obs }}</td>
+          <td>{{ "Yes" if client.active else "No" }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
 
 
     <script src="{{ url_for('static', filename='js/manage_clients.js') }}"></script> 
