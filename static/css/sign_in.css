@@ -1,0 +1,73 @@
+/* static/css/style.css */
+body {
+    background-color: #e9e9e9;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+  }
+
+/* Torna os campos mais altos e largos */
+input[type="text"],
+input[type="password"] {
+  width: 44vh;         /* Largura dos campos */
+  height: 8vh;         /* Altura/grossura */
+  padding: 1vh 2vh;    /* Espaçamento interno */
+  font-size: 22px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-bottom: 2vh;
+  margin-top: 2vh;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 44vh;
+  margin-bottom: 2vh;
+}
+
+.password-wrapper input {
+  width: 100%;
+  height: 8vh;
+  padding: 1vh 2vh;
+  font-size: 22px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+/* Torna o botão com o mesmo tamanho dos campos */
+button#signIn {
+  width: 44vh;
+  height: 8vh;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button#signIn:hover {
+  background-color: #0056b3;
+}
+
+ .signup {
+  margin-top: 20px;
+  font-size: 18px
+}
+
+

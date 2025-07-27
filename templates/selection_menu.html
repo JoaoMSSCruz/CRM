@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Selection Menu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/selection_menu.css') }}">
+</head>
+<body>
+
+  <h1>Welcome, {{ username }}!</h1>
+
+  <div class="menu-container">
+    <button onclick="location.href='/manage_clients'">Manage Clients</button>
+    <button onclick="location.href='/manage_services'">Manage Services</button>
+    <button onclick="location.href='/logout'">Log Out</button>
+  </div>
+
+  <script src="{{ url_for('static', filename='js/selection_menu.js') }}"></script>
+</body>
+</html>

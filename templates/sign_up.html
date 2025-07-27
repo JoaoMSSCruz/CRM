@@ -1,0 +1,30 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <!-- Liga o CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/sign_up.css') }}">
+</head>
+<body>
+    <a href="/" class="go-back">← Go Back</a>
+  
+  <h1>Sign up</h1>
+
+  <form id="signUpForm">
+    <input type="text" id="username" name="username" required placeholder="Username"><br><br>
+
+    <div class="password-wrapper">
+      <input type="password" id="password" name="password" required placeholder="Password">
+      <span class="toggle-password" id="togglePassword">👁️</span>
+    </div>
+
+    <button type="submit" id="signUp">Sign up</button>
+
+  </form>
+
+  <!-- Liga o JS -->
+  <script src="{{ url_for('static', filename='js/sign_up.js') }}"></script>
+</body>
+</html>
