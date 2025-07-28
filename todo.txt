@@ -1,0 +1,10 @@
+1) Nova tabela: Company -> Nome, Data
+
+2) Manage Clients -> Company ser uma referência à tabela Company
+                  -> clicar num cliente e ver todos os atendimentos relativos a else
+                  -> Filtrar os clientes por active 
+                  -> Filtrar os clientes por Data e Empresa
+
+3) Manage Services -> Filtrar os clientes por Data, Duração e Cost
+                   -> Adicionar a coluna company
+                
